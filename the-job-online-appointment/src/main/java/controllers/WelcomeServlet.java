@@ -8,11 +8,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-//import dao.UserDao;
-//import dao.UserDaoImpl;
-//import models.User;
-//import services.RegistrationServiceImpl;
-//import services.RegistrationServices;
+import dao.UserDao;
+import dao.UserDaoImpl;
+import models.User;
+import services.RegistrationServiceImpl;
+import services.RegistrationServices;
 
 
 @WebServlet("")

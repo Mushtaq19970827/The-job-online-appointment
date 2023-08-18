@@ -6,7 +6,7 @@
     <title>The Job</title>
     <!-- Boxicons CDN Link -->
     
-    <link href="${pageContext.request.contextPath}/css/style-02.css?version=1" rel="stylesheet" >
+    <link href="../css/style-02.css?version=1" rel="stylesheet" >
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
 

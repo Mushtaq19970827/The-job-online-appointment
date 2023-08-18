@@ -5,7 +5,7 @@
   <head>
     <meta charset="UTF-8">
     <title>The Job</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style-02.css?version=1">
+    <link rel="stylesheet" href="../css/style-02.css?version=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXlrzF1/+3v/HaBwiW+kWimz1lOMl3Z83O+OrCXaRkf" crossorigin="anonymous">
     
     <!-- Boxicons CDN Link -->

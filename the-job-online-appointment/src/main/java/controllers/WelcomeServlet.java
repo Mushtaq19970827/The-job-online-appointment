@@ -15,7 +15,7 @@ import services.RegistrationServiceImpl;
 import services.RegistrationServices;
 
 
-@WebServlet("")
+@WebServlet("/")
 public class WelcomeServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

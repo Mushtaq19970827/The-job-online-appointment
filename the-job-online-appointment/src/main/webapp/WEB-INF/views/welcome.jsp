@@ -1,11 +1,11 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
 <title>Get Started</title>
- <link rel="stylesheet" href="<c:url value="/webjars/bootstrap/5.3.0/css/bootstrap.min.css" />">
- <link rel="stylesheet" href="css/style-02.css?version=1">
+ <link rel="stylesheet" href="css/style-01.css?version=1">
 <style>
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 body {
@@ -30,7 +30,7 @@ body {
     transition: all 0.1s ease-in-out;
      box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8),
         6px 6px 10px rgba(0, 0, 0, 0.2);
-      color: black;
+      color: #58006c;
       line-height: 50px;
       font-family: "Montserrat", sans-serif;
       font-size: 18px;
@@ -50,10 +50,10 @@ body {
 </style>
 </head>
 <body>
- <script src="<c:url value="/webjars/bootstrap/5.3.0/js/bootstrap.min.js" />"></script>
+
 <div id="login-box">
   <div class="left">
-    <h1 style="color:black;">Choose Your Role...</h1><br>
+    <h1 style="color:#58006c;">Choose Your Role...</h1><br>
     <div class="button" onclick="redirectToLogin('Job Hunter')"><span class="text">Job Hunter</span></div>
     <div class="button" onclick="redirectToLogin('Consultant')"><span>Consultant</span></div>
     <div class="button" onclick="redirectToLogin('Administrator')"><span>Administrator</span></div>

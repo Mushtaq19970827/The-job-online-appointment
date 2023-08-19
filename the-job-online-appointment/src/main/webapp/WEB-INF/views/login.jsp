@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
     <%
     boolean visitedWelcomePage = (boolean) session.getAttribute("visitedWelcomePage");
     if (visitedWelcomePage==false) {
@@ -14,7 +15,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Login Page</title>
-<link rel="stylesheet" href="css/style-01.css">
+<link rel="stylesheet" href="./css/style-01.css">
 </head>
 <body>
 <div id="login-box">

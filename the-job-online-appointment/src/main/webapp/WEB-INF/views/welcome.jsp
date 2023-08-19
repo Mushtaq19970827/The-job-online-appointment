@@ -1,22 +1,22 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
 <title>Get Started</title>
-<link rel="stylesheet" href="css/style-01.css">
+ <link rel="stylesheet" href="<c:url value="/webjars/bootstrap/5.3.0/css/bootstrap.min.css" />">
+ <link rel="stylesheet" href="css/style-02.css?version=1">
 <style>
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 body {
-  width: 100vw;
-  height: 100vh;
+  width: 99%;
+  height: 80vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; 
   flex-direction: column;
-  background: #f3f0f1;
+  background: rgb(255,243,248);
+  background: radial-gradient(circle, rgba(255,243,248,1) 0%, rgba(148,187,233,1) 100%);
   .button {
     width: 300px;
     height: 50px;
@@ -30,7 +30,7 @@ body {
     transition: all 0.1s ease-in-out;
      box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8),
         6px 6px 10px rgba(0, 0, 0, 0.2);
-      color: #6f6cde;
+      color: black;
       line-height: 50px;
       font-family: "Montserrat", sans-serif;
       font-size: 18px;
@@ -50,23 +50,17 @@ body {
 </style>
 </head>
 <body>
+ <script src="<c:url value="/webjars/bootstrap/5.3.0/js/bootstrap.min.js" />"></script>
 <div id="login-box">
   <div class="left">
-    <h1 style="color:#6f6cde;">Get Started...</h1><br>
-    
+    <h1 style="color:black;">Choose Your Role...</h1><br>
     <div class="button" onclick="redirectToLogin('Job Hunter')"><span class="text">Job Hunter</span></div>
-<div class="button" onclick="redirectToLogin('Consultant')"><span>Consultant</span></div>
-<div class="button" onclick="redirectToLogin('Administrator')"><span>Administrator</span></div>
-
-
-    
+    <div class="button" onclick="redirectToLogin('Consultant')"><span>Consultant</span></div>
+    <div class="button" onclick="redirectToLogin('Administrator')"><span>Administrator</span></div>
   </div>
   
   <div class="right">
     <div >
-		<figure>
-			<img src="images/img01.png" alt="welcome image" width=120% height=150%>
-		</figure>
 		
 	</div>
   </div>

@@ -35,54 +35,29 @@
      </style>
    </head>
 <body>
-  <div class="sidebar">
-    <div class="logo-details">
-      <i class='bx bx-briefcase icon'></i>
-        <div class="logo_name">The Job</div>
-        <i class='bx bx-menu' id="btn" ></i>
-    </div>
-    <ul class="nav-list">
-     <!--   <li>
-          <i class='bx bx-search' ></i>
-         <input type="text" placeholder="Search...">
-         <span class="tooltip">Search</span>
-      </li> -->
-      <li>
-        <a href="<%= request.getContextPath() %>/jobseeker">
-          <i class='bx bx-grid-alt'></i>
-          <span class="links_name">Dashboard</span>
-        </a>
-         <span class="tooltip">Dashboard</span>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="<%= request.getContextPath() %>/admin">The Job</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="<%= request.getContextPath() %>/admin">Dashboard</a>
       </li>
-      <li>
-       <a href="<%= request.getContextPath() %>/jobseeker/consultants">
-         <i class='bx bx-briefcase' ></i>
-         <span class="links_name">Consultants</span>
-       </a>
-       <span class="tooltip">Consultants</span>
-     </li>
-     
-     <li>
-       <a href="<%= request.getContextPath() %>/jobseeker/appointments">
-         <i class='bx bx-calendar'></i>
-         <span class="links_name">Appointments</span>
-       </a>
-       <span class="tooltip">Appointments</span>
-     </li>
-     
-     
-     <li class="profile">
-         <div class="profile-details">
-           <img src="${pageContext.request.contextPath}/images/profile.png" alt="profileImg">
-           <div class="name_job">
-             <div class="name"><%= session.getAttribute("username") %></div>
-             <div class="job">Web designer</div>
-           </div>
-         </div>
-         <a href="<%= request.getContextPath() %>"><i class='bx bx-log-out' id="log_out" ></i></a>
-     </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<%= request.getContextPath() %>/admin/clients">Clients </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<%= request.getContextPath() %>/admin/consultants">Consultants <span class="sr-only">(current)</span></a>
+      </li>
     </ul>
+    <span class="navbar-text">
+      Welcome <%= session.getAttribute("username") %> !
+      <a href="<%= request.getContextPath() %>/login"><i class='bx bx-log-out' id="log_out" ></i></a>
+    </span>
   </div>
+</nav>
   <section class="home-section">
     
       	<h2><div class="text">Consultants</div><input type="text" id="searchInput" class="input"  placeholder="Search by country...">

@@ -53,7 +53,7 @@ body {
 
 <div id="login-box">
   <div class="left">
-    <h1 style="color:#58006c;">Choose Your Role...</h1><br>
+    <h1 style="color:#58006c;">Your Role...</h1><br>
     <div class="button" onclick="redirectToLogin('Job Hunter')"><span class="text">Job Hunter</span></div>
     <div class="button" onclick="redirectToLogin('Consultant')"><span>Consultant</span></div>
     <div class="button" onclick="redirectToLogin('Administrator')"><span>Administrator</span></div>

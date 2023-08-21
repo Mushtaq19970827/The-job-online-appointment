@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -7,105 +8,74 @@
     <!-- Boxicons CDN Link -->
     
     <link href="../css/style-02.css?version=1" rel="stylesheet" >
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
    </head>
 <body>
-  <div class="sidebar">
-    <div class="logo-details">
-      <i class='bx bx-briefcase icon'></i>
-        <div class="logo_name">The Job</div>
-        <i class='bx bx-menu' id="btn" ></i>
-    </div>
-    <ul class="nav-list">
-     <!--   <li>
-          <i class='bx bx-search' ></i>
-         <input type="text" placeholder="Search...">
-         <span class="tooltip">Search</span>
-      </li> -->
-      <li>
-        <a href="<%= request.getContextPath() %>/admin">
-          <i class='bx bx-grid-alt'></i>
-          <span class="links_name">Dashboard</span>
-        </a>
-         <span class="tooltip">Dashboard</span>
+       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="<%= request.getContextPath() %>/admin">The Job</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="<%= request.getContextPath() %>/admin">Dashboard</a>
       </li>
-      <li>
-       <a href="<%= request.getContextPath() %>/admin/clients">
-         <i class='bx bx-briefcase' ></i>
-         <span class="links_name">Clients</span>
-       </a>
-       <span class="tooltip">Clients</span>
-     </li>
-     
-     <li>
-       <a href="<%= request.getContextPath() %>/admin/consultants">
-		<i class='bx bx-bulb' ></i>
-         <span class="links_name">Consultants</span>
-       </a>
-       <span class="tooltip">Consultants</span>
-     </li>
-     <li>
-       <a href="<%= request.getContextPath() %>/admin/appointments">
-         <i class='bx bx-calendar'></i>
-         <span class="links_name">Appointments</span>
-       </a>
-       <span class="tooltip">Appointments</span>
-     </li>
-      <li>
-       <a href="<%= request.getContextPath() %>/admin/reports">
-         <i class='bx bxs-report'></i>
-         <span class="links_name">Reports</span>
-       </a>
-       <span class="tooltip">Reports</span>
-     </li>
-     
-     <li class="profile">
-         <div class="profile-details">
-           <img src="${pageContext.request.contextPath}/images/profile.png" alt="profileImg">
-           <div class="name_job">
-             <div class="name"><%= session.getAttribute("username") %></div>
-             <div class="job">Web designer</div>
-           </div>
-         </div>
-         <a href="<%= request.getContextPath() %>/login"><i class='bx bx-log-out' id="log_out" ></i></a>
-     </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<%= request.getContextPath() %>/admin/clients">Clients </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<%= request.getContextPath() %>/admin/consultants">Consultants <span class="sr-only">(current)</span></a>
+      </li>
     </ul>
+    <span class="navbar-text">
+      Welcome <%= session.getAttribute("username") %> !
+      <a href="<%= request.getContextPath() %>/login"><i class='bx bx-log-out' id="log_out" ></i></a>
+    </span>
   </div>
+</nav>
   <section class="home-section">
-   <h2><div class="text">Clients</div></h2>
 	<!-- Details priting -->
   <div class="column-3">
 			<div class="right-column">
 			  <div class="container">
+			  
+			  
 			    <div class="table-container">
   <!-- <h2 class="header">Job Seekers' Details</h2>  -->
 				  <br>
 				  <ul class="responsive-table">
-				    <li class="table-header">
-				      <div class="col col-1">Client Id</div>
-				      <div class="col col-2">Email</div>
-				      <div class="col col-3">Mobile</div>
-				      <div class="col col-4">Delete</div>
-				    </li>
-				    
-				    <c:forEach items="${jobSeekers}" var="jobSeeker">
-				       <li class="table-row">
-				            <div class="col col-1" data-label="Username">${jobSeeker.username}</div>
-				            <div class="col col-2" data-label="Email">${jobSeeker.email}</div>
-				            <div class="col col-3" data-label="Phone">${jobSeeker.mobile}</div>
-				            <div class="col col-4" data-label="More">
-				            <form method="post" action="<%= request.getContextPath()%>/admin/client/delete">
-						        <input type="hidden" name="action" value="delete">
-						        <input type="hidden" name="jobseekeremail" value="${jobSeeker.email}">
-						        <button type="submit" class="delete-button">Delete</button>
-						    </form>
-						    </div>
-				       </li>
-				     </c:forEach>
+				  <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Client Id</th>
+      <th scope="col">Email</th>
+      <th scope="col">Mobile</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+  <c:forEach items="${jobSeekers}" var="jobSeeker">
+    <tr>
+        <td>${jobSeeker.username}</td>
+        <td>${jobSeeker.email}</td>
+        <td>${jobSeeker.mobile}</td>
+        <td>
+            <form method="post" action="<%= request.getContextPath()%>/admin/client/delete">
+                <input type="hidden" name="action" value="delete">
+                <input type="hidden" name="jobseekeremail" value="${jobSeeker.email}">
+                <button type="submit" class="delete-button">Delete</button>
+            </form>
+     		   </td>
+   				 </tr>
+				</c:forEach>
+  				</tbody>
+			</table>
 				  </ul>
-				</div> 
+				</div> 	
 			 </div>
 		</div>  
 	</div>
@@ -134,5 +104,8 @@
    }
   }
   </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>

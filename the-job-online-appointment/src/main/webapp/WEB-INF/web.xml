@@ -4,6 +4,10 @@
 
 <web-app>
   <display-name>The Job Online Appointment scheduler</display-name>
+  <welcome-file-list>
+    <welcome-file>welcome</welcome-file>
+</welcome-file-list>
+  
   <servlet>
   	<servlet-name>WelcomeServlet</servlet-name>
   	<display-name>WelcomeServlet</display-name>

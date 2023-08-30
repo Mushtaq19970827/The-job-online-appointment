@@ -26,7 +26,10 @@
         <a class="nav-link" href="<%= request.getContextPath() %>/admin/clients">Clients </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<%= request.getContextPath() %>/admin/consultants">Consultants <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="<%= request.getContextPath() %>/admin/consultants">Consultants </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<%= request.getContextPath() %>/admin/reports">Reports</a>
       </li>
     </ul>
     <span class="navbar-text">

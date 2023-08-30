@@ -14,20 +14,20 @@
 <body>
   
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="<%= request.getContextPath() %>/admin">The Job</a>
+  <a class="navbar-brand" href="<%= request.getContextPath() %>/jobseeker">The Job</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarText">
-    <ul class="navbar-nav mr-auto">
+   <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="<%= request.getContextPath() %>/admin">Dashboard</a>
+        <a class="nav-link" href="<%= request.getContextPath() %>/jobseeker">Dashboard</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<%= request.getContextPath() %>/admin/clients">Clients </a>
+        <a class="nav-link" href="<%= request.getContextPath() %>/jobseeker/consultants">Consultants</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<%= request.getContextPath() %>/admin/consultants">Consultants <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="<%= request.getContextPath() %>/jobseeker/appointments"><b>Appointments</b> <span class="sr-only">(current)</span></a>
       </li>
     </ul>
     <span class="navbar-text">

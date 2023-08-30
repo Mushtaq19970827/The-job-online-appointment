@@ -1,5 +1,4 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -14,24 +13,24 @@
 
    </head>
 <body>
-       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="<%= request.getContextPath() %>/admin">The Job</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarText">
-    <ul class="navbar-nav mr-auto">
+   <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
         <a class="nav-link" href="<%= request.getContextPath() %>/admin"><span style="color: grey;">Dashboard</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<%= request.getContextPath() %>/admin/clients"><span style="color: white;">Clients</span></a>
+        <a class="nav-link" href="<%= request.getContextPath() %>/admin/clients">Clients</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<%= request.getContextPath() %>/admin/consultants">Consultants <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="<%= request.getContextPath() %>/admin/consultants">Consultants</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<%= request.getContextPath() %>/admin/reports">Reports</a>
+        <a class="nav-link" href="<%= request.getContextPath() %>/admin/reports"><span style="color: white;">Reports </span></a>
       </li>
     </ul>
     <span class="navbar-text">
@@ -39,49 +38,43 @@
       <a href="<%= request.getContextPath() %>/login"><i class='bx bx-log-out' id="log_out" ></i></a>
     </span>
   </div>
-</nav>
+</nav> 
+  
   <section class="home-section">
-	<!-- Details priting -->
-  <div class="column-3">
+      
+      <div class="column-3">
 			<div class="right-column">
 			  <div class="container">
-			  
-			  
 			    <div class="table-container">
-  <!-- <h2 class="header">Job Seekers' Details</h2>  -->
-				  <br>
-				  <ul class="responsive-table">
-				  <table class="table table-striped">
-  <thead>
-    <tr>
-      <th scope="col">Client Id</th>
-      <th scope="col">Email</th>
-      <th scope="col">Mobile</th>
-      <th scope="col">Delete</th>
-    </tr>
-  </thead>
-  <tbody>
-  <c:forEach items="${jobSeekers}" var="jobSeeker">
-    <tr>
-        <td>${jobSeeker.username}</td>
-        <td>${jobSeeker.email}</td>
-        <td>${jobSeeker.mobile}</td>
-        <td>
-            <form method="post" action="<%= request.getContextPath()%>/admin/client/delete">
-                <input type="hidden" name="action" value="delete">
-                <input type="hidden" name="jobseekeremail" value="${jobSeeker.email}">
-                <button type="submit" class="delete-button">Delete</button>
-            </form>
-     		   </td>
-   				 </tr>
-				</c:forEach>
-  				</tbody>
-			</table>
-				  </ul>
-				</div> 	
-			 </div>
-		</div>  
-	</div>
+			    <form action="<%= request.getContextPath() %>/admin/generate-report" method="POST">
+    					<input type="hidden" name="action" value="generate-report">
+					    <label for="monthSelect">Select Month:</label>
+					    <select id="monthSelect" name="selectedMonth">
+						    <option value="January">January</option>
+						    <option value="February">February</option>
+						    <option value="March">March</option>
+						    <option value="April">April</option>
+						    <option value="May">May</option>
+						    <option value="June">June</option>
+						    <option value="July">July</option>
+						    <option value="August">August</option>
+						    <option value="September">September</option>
+						    <option value="October">October</option>
+						    <option value="November">November</option>
+						    <option value="December">December</option>
+						</select>
+
+					    <input type="submit" value="Generate Report" class=add-button>
+				</form>
+
+			    
+			    </div>
+			  </div>
+			</div>
+		</div>
+			
+	 </div>
+
   </section>
   <script>
   let sidebar = document.querySelector(".sidebar");
@@ -107,8 +100,5 @@
    }
   }
   </script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>

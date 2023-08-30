@@ -31,8 +31,5 @@ public class WelcomeServlet extends HttpServlet {
     	session.setAttribute("userType", session.getAttribute("userType"));
     	System.out.println(session.getAttribute("userType"));
         request.getRequestDispatcher("/WEB-INF/views/welcome.jsp").forward(request, response);
-        
     }
-    
-   
 }

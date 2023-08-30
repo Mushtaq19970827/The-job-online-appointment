@@ -36,9 +36,9 @@ public class ConsultantServlet extends HttpServlet {
 	        int totalClients = service.getTotalClients();
 	        int totalConsultants = service.getTotalConsultants();
 	        
-	        System.out.println("totalAppointments : "+totalAppointments);
-	        System.out.println("totalClients : "+totalClients);
-	        System.out.println("totalConsultants : "+totalConsultants);
+	        request.setAttribute("totalAppointments", totalAppointments);
+	        request.setAttribute("totalClients", totalClients);
+	        request.setAttribute("totalConsultants", totalConsultants);
 		 
 	        if (pathInfo == null) {
 	            request.getRequestDispatcher("/WEB-INF/views/consultant/consultantHome.jsp").forward(request, response);

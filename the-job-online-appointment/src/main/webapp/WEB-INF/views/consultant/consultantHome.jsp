@@ -6,14 +6,14 @@
     <meta charset="UTF-8">
     <title>The Job</title>
     <link rel="stylesheet" href="css/style-02.css?version=1">
-       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXlrzF1/+3v/HaBwiW+kWimz1lOMl3Z83O+OrCXaRkf" crossorigin="anonymous">
-    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
    </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="<%= request.getContextPath() %>/consultant">The Job</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -24,10 +24,10 @@
         <a class="nav-link" href="<%= request.getContextPath() %>/consultant">Dashboard</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<%= request.getContextPath() %>/consultant/clients">Clients </a>
+        <a class="nav-link" href="<%= request.getContextPath() %>/consultant/clients">Clients</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<%= request.getContextPath() %>/consultant/consultants">Consultants <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="<%= request.getContextPath() %>/consultant/appointments">Appointments</a>
       </li>
     </ul>
     <span class="navbar-text">
@@ -36,9 +36,8 @@
     </span>
   </div>
 </nav>
-  <section class="home-section">
-        
-      	<h2><div class="text">Dashboard</div></h2>
+    <section class="home-section">
+      
       <div class="column-1">
     
     	
@@ -105,9 +104,8 @@
    }
   }
   </script>
-     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  
 </body>
 </html>

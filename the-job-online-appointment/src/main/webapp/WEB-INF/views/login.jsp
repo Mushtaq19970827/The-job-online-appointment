@@ -34,7 +34,7 @@ body {
   margin: 5% auto;
   width: 700px;
   height: 460px;
-  background: transparent;
+  background: white;
   border-radius: 2px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
@@ -125,7 +125,13 @@ input[type="submit"]:active {
     </form>
 </div>
 
-
+<div class="right">
+    <div>
+        <figure>
+            <img src="images/signin-image.jpg" alt="sing up image">
+        </figure>
+    </div>
+</div>
 </div>
 
 

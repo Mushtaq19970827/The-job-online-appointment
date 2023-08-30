@@ -6,28 +6,28 @@
     <meta charset="UTF-8">
     <title>The Job</title>
     <link rel="stylesheet" href="../css/style-02.css?version=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXlrzF1/+3v/HaBwiW+kWimz1lOMl3Z83O+OrCXaRkf" crossorigin="anonymous">
-    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
    </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="<%= request.getContextPath() %>/admin">The Job</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="<%= request.getContextPath() %>/consultant">The Job</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="<%= request.getContextPath() %>/admin">Dashboard</a>
+        <a class="nav-link" href="<%= request.getContextPath() %>/consultant"><span style="color: grey;">Dashboard</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<%= request.getContextPath() %>/admin/clients">Clients </a>
+        <a class="nav-link" href="<%= request.getContextPath() %>/consultant/clients">Clients</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<%= request.getContextPath() %>/admin/consultants">Consultants <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="<%= request.getContextPath() %>/consultant/appointments"><span style="color: white;">Appointments</span></a>
       </li>
     </ul>
     <span class="navbar-text">
@@ -37,7 +37,6 @@
   </div>
 </nav>
   <section class="home-section">
-      <h2><div class="text">Appointments</div></h2>
        <div class="column-3">
 			<div class="right-column">
 			  <div class="container">

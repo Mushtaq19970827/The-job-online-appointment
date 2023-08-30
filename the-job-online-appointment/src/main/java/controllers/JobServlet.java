@@ -24,7 +24,6 @@ public class JobServlet extends HttpServlet {
    
     public JobServlet() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -47,16 +46,11 @@ public class JobServlet extends HttpServlet {
             	request.setAttribute("consultants", consultants);
 	            request.getRequestDispatcher("/WEB-INF/views/jobseeker/consultants.jsp").forward(request, response);
 	        } 
-	        else if ("/services".equals(pathInfo)) {
-	            request.getRequestDispatcher("/WEB-INF/views/jobseeker/services.jsp").forward(request, response);
+	        else if ("/appointments".equals(pathInfo)) {
+	            request.getRequestDispatcher("/WEB-INF/views/jobseeker/appointments.jsp").forward(request, response);
 	        }else {
 	            response.sendError(HttpServletResponse.SC_NOT_FOUND);
 	        }
 	}
-
-//	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//		
-//		doGet(request, response);
-//	}
 
 }

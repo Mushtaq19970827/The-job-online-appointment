@@ -63,6 +63,14 @@ body {
     <div >
 		
 	</div>
+	
+	<div class="right">
+    <div>
+        <figure>
+            <img src="images/signup-image.jpg" alt="welocme image">
+        </figure>
+    </div>
+</div>
   </div>
   <script>
   function redirectToLogin(userType) {

@@ -57,15 +57,18 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarText">
-    <ul class="navbar-nav mr-auto">
+     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="<%= request.getContextPath() %>/admin">Dashboard</a>
+        <a class="nav-link" href="<%= request.getContextPath() %>/admin"><span style="color: grey;">Dashboard</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<%= request.getContextPath() %>/admin/clients">Clients </a>
+        <a class="nav-link" href="<%= request.getContextPath() %>/admin/clients">Clients</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<%= request.getContextPath() %>/admin/consultants">Consultants <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="<%= request.getContextPath() %>/admin/consultants"><span style="color: white;">Consultants </span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<%= request.getContextPath() %>/admin/reports">Reports</a>
       </li>
     </ul>
     <span class="navbar-text">

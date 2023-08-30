@@ -96,7 +96,7 @@ input[type="submit"]:active {
     
     <form action="<%= request.getContextPath() %>/register" method="POST">
     <input type="text" name="username" placeholder="Username" required />
-    <input type="text" name="email" placeholder="E-mail" required />
+    <input type="email" name="email" placeholder="E-mail" required />
     <input type="password" name="password" placeholder="Password" required />
     <input type="password" name="password2" placeholder="Retype password" required />
     <input type="text" name="mobile" placeholder="Mobile Number" required />

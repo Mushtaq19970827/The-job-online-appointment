@@ -1,6 +1,10 @@
 package controllers;
 
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -69,7 +73,8 @@ public class ConsultantServlet extends HttpServlet {
 	        String password2 = request.getParameter("password2");
 	        String mobile = request.getParameter("mobile");
 	        boolean userExists = service.isUserExistsByEmail(email);
-	        
+	        String dobString = request.getParameter("dob"); 
+
 	        System.out.println("COnsultant email : "+email);
 	        if (userExists) {
 	            request.setAttribute("errorMessage", "User with this email already exists.");
@@ -88,6 +93,39 @@ public class ConsultantServlet extends HttpServlet {
 		           
 		            request.getRequestDispatcher("/WEB-INF/views/admin/addnew.jsp").forward(request, response);
 		            return;
+		        }
+		        
+		        if (dobString != null && !dobString.isEmpty()) {
+		            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+
+		            try {
+		                Date dob = sdf.parse(dobString);
+		                Calendar dobCalendar = Calendar.getInstance();
+		                dobCalendar.setTime(dob);
+
+		                // Calculate the current date
+		                Calendar currentDate = Calendar.getInstance();
+
+		                // Subtract 20 years from the current date
+		                currentDate.add(Calendar.YEAR, -20);
+
+		                // Compare the DOB with currentDate
+		                if (dobCalendar.before(currentDate)) {
+		                    // The DOB is greater than 20 years ago
+		                    
+		                } else {
+		                    // The DOB is not greater than 20 years ago
+		                	System.out.println("too young");
+		                	request.setAttribute("errorMessage", "You are not older than 20");
+		                	request.getRequestDispatcher("/WEB-INF/views/admin/addnew.jsp").forward(request, response);
+				            return;
+		                }
+		            } catch (ParseException e) {
+		                // Handle parsing exception
+		                e.printStackTrace();
+		            }
+		        } else {
+		            
 		        }
 	        	Consultant consultant = new Consultant(username, password, email, mobile, country);
 		        String success = service.registerConsultant(consultant);

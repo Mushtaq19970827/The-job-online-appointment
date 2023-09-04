@@ -64,7 +64,7 @@
 						    <option value="December">December</option>
 						</select>
 
-					    <input type="submit" value="Generate Report" class=add-button>
+					    <button  value="Generate Report" class=add-button>Generate Report</button>
 				</form>
 
 			    

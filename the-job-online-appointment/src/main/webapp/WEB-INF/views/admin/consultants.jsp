@@ -68,10 +68,23 @@
     
     <c:forEach items="${consultants}" var="consultant">
   <li class="table-row">
-    <div class="col col-1" data-label="Username">${consultant.username}</div>
-    <div class="col col-2" data-label="Email">${consultant.email}</div>
-    <div class="col col-3" data-label="Mobile">${consultant.mobile}</div>
-    <div class="col col-4" data-label="Country">${consultant.country}</div>
+    <div class="col col-1" data-label="Username">Consultan01</div>
+    <div class="col col-2" data-label="Email">con01@gmail.com</div>
+    <div class="col col-3" data-label="Mobile">1234567890</div>
+    <div class="col col-4" data-label="Country">Sri Lanka</div>
+    <div class="col col-5" data-label="More">
+      <form method="post" action="<%= request.getContextPath()%>/admin/consultant/delete">
+        <input type="hidden" name="action" value="delete">
+        <input type="hidden" name="consultantemail" value="${consultant.email}">
+        <button type="submit" class="delete-button">Delete</button>
+      </form>
+    </div>
+  </li>
+  <li class="table-row">
+    <div class="col col-1" data-label="Username">Consultan02</div>
+    <div class="col col-2" data-label="Email">con02@gmail.com</div>
+    <div class="col col-3" data-label="Mobile">4567891230</div>
+    <div class="col col-4" data-label="Country">India</div>
     <div class="col col-5" data-label="More">
       <form method="post" action="<%= request.getContextPath()%>/admin/consultant/delete">
         <input type="hidden" name="action" value="delete">

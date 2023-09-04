@@ -63,9 +63,33 @@
   <tbody>
   <c:forEach items="${jobSeekers}" var="jobSeeker">
     <tr>
-        <td>${jobSeeker.username}</td>
-        <td>${jobSeeker.email}</td>
-        <td>${jobSeeker.mobile}</td>
+        <td>user01</td>
+        <td>user01@gmail.com</td>
+        <td>1234567890</td>
+        <td>
+            <form method="post" action="<%= request.getContextPath()%>/admin/client/delete">
+                <input type="hidden" name="action" value="delete">
+                <input type="hidden" name="jobseekeremail" value="${jobSeeker.email}">
+                <button type="submit" class="delete-button">Delete</button>
+            </form>
+     		   </td>
+   				 </tr>
+   				 <tr>
+        <td>user02</td>
+        <td>user02@gmail.com</td>
+        <td>4567812390</td>
+        <td>
+            <form method="post" action="<%= request.getContextPath()%>/admin/client/delete">
+                <input type="hidden" name="action" value="delete">
+                <input type="hidden" name="jobseekeremail" value="${jobSeeker.email}">
+                <button type="submit" class="delete-button">Delete</button>
+            </form>
+     		   </td>
+   				 </tr>
+   				  <tr>
+        <td>user03</td>
+        <td>user03@gmail.com</td>
+        <td>7891212390</td>
         <td>
             <form method="post" action="<%= request.getContextPath()%>/admin/client/delete">
                 <input type="hidden" name="action" value="delete">

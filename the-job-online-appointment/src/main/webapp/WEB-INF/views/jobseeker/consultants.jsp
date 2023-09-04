@@ -83,9 +83,97 @@
     <c:forEach items="${consultants}" var="consultant">
     <form method="post" action="<%= request.getContextPath() %>/jobseeker/appointments" >
        <li class="table-row">
-            <div class="col col-1" data-label="Username" >${consultant.username}</div>
-            <div class="col col-2" data-label="Email" >${consultant.country}</div>
-            <div class="col col-3" data-label="Mobile" >${consultant.mobile}</div>
+            <div class="col col-1" data-label="Username" >Consultan01</div>
+            <div class="col col-2" data-label="Email" >Sri Lanka</div>
+            <div class="col col-3" data-label="Mobile" >1234567890</div>
+            <div class="col col-4" data-label="Date" ><input type="date" name="appointmentDate"></div>
+            <div class="col col-5" data-label="Time">
+            <select name="appointmentTime">
+                <option >Select</option>
+            	<option value="9.30">9.30</option>
+            	<option value="10.30">10.30</option>
+            	<option value="11.30">11.30</option>
+            	<option value="12.30">12.30</option>
+            	<option value="2.30">2.30</option>
+            	<option value="3.30">3.30</option>
+            	<option value="4.30">4.30</option>
+            </select>
+            </div>
+             <input type="hidden" name="consultantUsername" value="${consultant.username}">
+   			 <input type="hidden" name="consultantEmail" value="${consultant.email}">
+   			 <input type="hidden" name="consultantMobile" value="${consultant.mobile}">
+            <div class="col col-6" data-label="More"><button class="book-button" type="submit">Book</button></div>
+       </li>
+        <li class="table-row">
+            <div class="col col-1" data-label="Username" >Consultan02</div>
+            <div class="col col-2" data-label="Email" >Italy</div>
+            <div class="col col-3" data-label="Mobile" >4567890123</div>
+            <div class="col col-4" data-label="Date" ><input type="date" name="appointmentDate"></div>
+            <div class="col col-5" data-label="Time">
+            <select name="appointmentTime">
+                <option >Select</option>
+            	<option value="9.30">9.30</option>
+            	<option value="10.30">10.30</option>
+            	<option value="11.30">11.30</option>
+            	<option value="12.30">12.30</option>
+            	<option value="2.30">2.30</option>
+            	<option value="3.30">3.30</option>
+            	<option value="4.30">4.30</option>
+            </select>
+            </div>
+             <input type="hidden" name="consultantUsername" value="${consultant.username}">
+   			 <input type="hidden" name="consultantEmail" value="${consultant.email}">
+   			 <input type="hidden" name="consultantMobile" value="${consultant.mobile}">
+            <div class="col col-6" data-label="More"><button class="book-button" type="submit">Book</button></div>
+       </li>
+        <li class="table-row">
+            <div class="col col-1" data-label="Username" >Consultan03</div>
+            <div class="col col-2" data-label="Email" >India</div>
+            <div class="col col-3" data-label="Mobile" >8834567890</div>
+            <div class="col col-4" data-label="Date" ><input type="date" name="appointmentDate"></div>
+            <div class="col col-5" data-label="Time">
+            <select name="appointmentTime">
+                <option >Select</option>
+            	<option value="9.30">9.30</option>
+            	<option value="10.30">10.30</option>
+            	<option value="11.30">11.30</option>
+            	<option value="12.30">12.30</option>
+            	<option value="2.30">2.30</option>
+            	<option value="3.30">3.30</option>
+            	<option value="4.30">4.30</option>
+            </select>
+            </div>
+             <input type="hidden" name="consultantUsername" value="${consultant.username}">
+   			 <input type="hidden" name="consultantEmail" value="${consultant.email}">
+   			 <input type="hidden" name="consultantMobile" value="${consultant.mobile}">
+            <div class="col col-6" data-label="More"><button class="book-button" type="submit">Book</button></div>
+       </li>
+        <li class="table-row">
+            <div class="col col-1" data-label="Username" >Consultan04</div>
+            <div class="col col-2" data-label="Email" >Sri Lanka</div>
+            <div class="col col-3" data-label="Mobile" >7655367890</div>
+            <div class="col col-4" data-label="Date" ><input type="date" name="appointmentDate"></div>
+            <div class="col col-5" data-label="Time">
+            <select name="appointmentTime">
+                <option >Select</option>
+            	<option value="9.30">9.30</option>
+            	<option value="10.30">10.30</option>
+            	<option value="11.30">11.30</option>
+            	<option value="12.30">12.30</option>
+            	<option value="2.30">2.30</option>
+            	<option value="3.30">3.30</option>
+            	<option value="4.30">4.30</option>
+            </select>
+            </div>
+             <input type="hidden" name="consultantUsername" value="${consultant.username}">
+   			 <input type="hidden" name="consultantEmail" value="${consultant.email}">
+   			 <input type="hidden" name="consultantMobile" value="${consultant.mobile}">
+            <div class="col col-6" data-label="More"><button class="book-button" type="submit">Book</button></div>
+       </li>
+        <li class="table-row">
+            <div class="col col-1" data-label="Username" >Consultan05</div>
+            <div class="col col-2" data-label="Email" >Germany</div>
+            <div class="col col-3" data-label="Mobile" >09982317890</div>
             <div class="col col-4" data-label="Date" ><input type="date" name="appointmentDate"></div>
             <div class="col col-5" data-label="Time">
             <select name="appointmentTime">

@@ -85,8 +85,10 @@
 			    <div class="table-container">
 			      <p style="color:red;font-size:12;"><%= request.getAttribute("errorMessage") %></p>
 			    <form action="<%= request.getContextPath() %>/consultant/register" method="POST">
-				    <input type="text" name="username" placeholder="Username" required />
-				    <input type="text" name="email" placeholder="E-mail" required />
+				    <input type="text" name="username" placeholder="Firstname" required />
+				    <input type="text" name="lastname" placeholder="Lastname" required />
+				    DOB:  <input type="date" name="dob" placeholder="DOB" required />
+				   <input type="text" name="email" placeholder="E-mail" required />
 				    <input type="text" name="country" placeholder="Country" required />
 				    <input type="password" name="password" placeholder="Password" required />
 				    <input type="password" name="password2" placeholder="Retype password" required />

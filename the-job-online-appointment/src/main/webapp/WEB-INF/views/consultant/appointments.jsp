@@ -54,14 +54,30 @@
 				    </li>
 				    
 				    <c:forEach items="${appointments}" var="appointment">
-				       <li class="table-row">
-				            <div class="col col-1" data-label="Username">${appointment.consultantName}</div>
-				            <div class="col col-2" data-label="Phone">${appointment.consultantMobile}</div>
-				            <div class="col col-3" data-label="uname">${appointment.username}</div>
-				            <div class="col col-4" data-label="date">${appointment.appointmentDate}</div>
-				            <div class="col col-5" data-label="time">${appointment.appointmentTime}</div>
-				            <div class="col col-6" data-label="cancel"><button class="delete-button">Cancel</button></div>
-				       </li>
+				      <li class="table-row">
+        <div class="col col-1" data-label="Username">Consultan01</div>
+        <div class="col col-2" data-label="Phone">1234567890</div>
+        <div class="col col-3" data-label="uname">user01</div>
+        <div class="col col-4" data-label="date">2023-09-15</div>
+        <div class="col col-5" data-label="time">10:00 AM</div>
+        <div class="col col-6" data-label="cancel"><button class="delete-button">Cancel</button></div>
+    </li>
+    <li class="table-row">
+        <div class="col col-1" data-label="Username">Consultan02</div>
+        <div class="col col-2" data-label="Phone">4567812390</div>
+        <div class="col col-3" data-label="uname">user01</div>
+        <div class="col col-4" data-label="date">2023-08-23</div>
+        <div class="col col-5" data-label="time">12.00 PM</div>
+        <div class="col col-6" data-label="cancel"><button class="delete-button">Cancel</button></div>
+    </li>
+    <li class="table-row">
+        <div class="col col-1" data-label="Username">Consultan03</div>
+        <div class="col col-2" data-label="Phone">1234567890</div>
+        <div class="col col-3" data-label="uname">user03</div>
+        <div class="col col-4" data-label="date">2023-08-31</div>
+        <div class="col col-5" data-label="time">10:00 AM</div>
+        <div class="col col-6" data-label="cancel"><button class="delete-button">Cancel</button></div>
+    </li>
 				     </c:forEach>
 				  </ul>
 				</div> 

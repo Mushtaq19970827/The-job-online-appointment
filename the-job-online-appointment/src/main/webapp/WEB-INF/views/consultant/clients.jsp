@@ -48,15 +48,27 @@
 				      <div class="col col-1">Client Id</div>
 				      <div class="col col-2">Email</div>
 				      <div class="col col-3">Mobile</div>
-				      <div class="col col-4">Delete</div>
+				      <div class="col col-4">More</div>
 				    </li>
 				    
 				    <c:forEach items="${jobSeekers}" var="jobSeeker">
 				       <li class="table-row">
-				            <div class="col col-1" data-label="Username">${jobSeeker.username}</div>
-				            <div class="col col-2" data-label="Email">${jobSeeker.email}</div>
-				            <div class="col col-3" data-label="Phone">${jobSeeker.mobile}</div>
-				            <div class="col col-4" data-label="More"><button>Delete</button></div>
+				            <div class="col col-1" data-label="Username">user01</div>
+				            <div class="col col-2" data-label="Email">user01@gmail.com</div>
+				            <div class="col col-3" data-label="Phone">1234567890</div>
+				            <div class="col col-4" data-label="More"><button>View</button></div>
+				       </li>
+				       <li class="table-row">
+				            <div class="col col-1" data-label="Username">user02</div>
+				            <div class="col col-2" data-label="Email">user02@gmail.com</div>
+				            <div class="col col-3" data-label="Phone">4567891230</div>
+				            <div class="col col-4" data-label="More"><button>View</button></div>
+				       </li>
+				       <li class="table-row">
+				            <div class="col col-1" data-label="Username">user03</div>
+				            <div class="col col-2" data-label="Email">user03@gmail.com</div>
+				            <div class="col col-3" data-label="Phone">x567891230</div>
+				            <div class="col col-4" data-label="More"><button>View</button></div>
 				       </li>
 				     </c:forEach>
 				  </ul>

@@ -46,7 +46,7 @@
     		<div class="card-1">
 			  <div class="container">
 			    <h4 style="text-align:center;color:white;"><b>Total Appointments</b></h4> 
-			    <p style="font-size:30px;text-align:center;color:white;"><%= request.getAttribute("totalAppointments") %></p> 
+			    <p style="font-size:30px;text-align:center;color:white;">10</p> 
 			  </div>
 			</div>
 			
@@ -60,7 +60,7 @@
 			<div class="card-2">
 			  <div class="container">
 			    <h4 style="text-align:center;color:white;"><b>Total Clients</b></h4> 
-			    <p style="font-size:30px;text-align:center;color:white;"><%= request.getAttribute("totalClients") %></p> 
+			    <p style="font-size:30px;text-align:center;color:white;">3</p> 
 			  </div>
 			</div>
     	</div>
@@ -73,7 +73,7 @@
 			<div class="card-3">
 			  <div class="container">
 			    <h4 style="text-align:center;color:white;"><b>Total Consultants</b></h4> 
-			    <p style="font-size:30px;text-align:center;color:white;"><%= request.getAttribute("totalConsultants") %></p> 
+			    <p style="font-size:30px;text-align:center;color:white;">2</p> 
 			  </div>
 			</div>
     	</div>
